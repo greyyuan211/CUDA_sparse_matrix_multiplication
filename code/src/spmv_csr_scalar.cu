@@ -2,7 +2,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <cuda.h>
-// #include <sys/time.h>
+#include <sys/time.h>
 #include "mmio.h"
 
 #define BlockDim 1024
@@ -75,7 +75,7 @@ void spmv_csr_scalar(MatrixInfo<T> * mat,T *vector,T *out)
 	// Calculate and print out GFLOPs and GB/s 
 	double gbs = ((mat->N * sizeof(T)) + (mat->nz*sizeof(T)) + (mat->M*sizeof(int)) + (mat->nz*sizeof(int)) + (mat->M*sizeof(T))) / (milliseconds/ITER) / 1e6;
     	time_taken = (milliseconds/ITER)/1000.0; 
-    	printf("Average time taken for %s is %f\n", "SpMV by GPU CSR Algorithm",time_taken);
+    	printf("Average time taken for %s is %f\n", "SpMV by GPU CSR Scalar Algorithm",time_taken);
     	printf("Average GFLOP/s is %lf\n",gflop/time_taken);
 	printf("Average GB/s is %lf\n\n",gbs);
 }
