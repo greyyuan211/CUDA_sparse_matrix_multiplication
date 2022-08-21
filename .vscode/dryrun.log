@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/greyy/Desktop/CUDA Linwei/CUDA_sparse_matrix_multiplication'
+make: Leaving directory 'c:/Users/greyy/Desktop/CUDA Linwei/CUDA_sparse_matrix_multiplication'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
